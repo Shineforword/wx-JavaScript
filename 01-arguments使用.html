@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arguments使用</title>
+    <script>
+      // 函数的argument  只有函数才有内置arguments对象
+      function fn() {
+        console.log(arguments);
+        console.log(arguments.length);
+        console.log(arguments[1]);
+      }
+      // 函数调用
+      fn(1, 2, 3);
+      // arguments 伪数组(伪数组不是真正意义上的数组)
+      // 1具有数组的length属性
+      // 2.按照索引存储
+      // 3.没有真正数组的一些方法push() pop()等
+      // 4.可以按照数组的方式遍历
+
+      // 函数的声明方式
+      // 1.function 命名函数
+      // 2.函数表达式(匿名函数)
+      // var 变量名 = funcition(){}
+      var fun = function () {
+        console.log(arguments);
+
+        console.log('我是函数表达式');
+      };
+      fun();
+      //(1)fun是变量名 不是函数名
+      //(2)函数表达式声明方式跟声明变量差不多,只不过变量存的是值 ,而函数表达式里面存的是函数
+      fun('pink');
+    </script>
+  </head>
+  <body>
+    <!-- 当我们不确定有多少个参数传递的时候, -->
+    <!-- 可以使用arguments来获取,在Javacript中,arguments实际上是当前函数的一个内置对象 -->
+    <!-- 所有函数都内置了一个arguments对象,arguments对象中存储了传递的所有实参 -->
+  </body>
+</html>

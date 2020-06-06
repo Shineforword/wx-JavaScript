@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字符串</title>
+    <script>
+      //
+      // 字符串
+      var str = 'anday';
+
+      // 长度
+      console.log(str.length);
+      // 字符串的不可变(指的是里边的值是不可变的,虽然看上去可以改变内容,但其实是地址变了,内存中新开辟了内存空间)
+      // 所以不要大量的拼接字符串
+
+      //str.indexOf 字符位置
+      console.log(str.indexOf('d'));
+      console.log(str.lastIndexOf('a', 2)); //指定查找起始位置
+
+      //根据位置返回字符
+      console.log(str.charAt(1));
+      console.log(str[0]); //h5新增
+      console.log(str.charCodeAt(0)); //返回索引号字符的ASCII值,应用判断用户返回了哪一个键
+
+      //拼接字符串
+      //concat(str1,str2,....)
+      //截取
+      //substr(start,lenth)
+      //slice(start,end)
+      //substring(start,end)
+
+      //  替换字符串(只替换第一个)
+      console.log(str.replace('a', '123'));
+
+      // 字符串转为数组
+      var str = '1@2@3@5';
+      console.log(str.split('@'));
+
+      // toUpercase()
+      // toLowercase()
+    </script>
+  </head>
+  <body>
+    <!-- 基本包装类型 -->
+    <!-- 为了方便操作基本数据类型,JS还提供了三个特殊引用类型:String Number Boolean -->
+    <!-- 基本包装类型 就是把简单数据类型包装秤复杂数据类型,这样基本数据类型就有了属性和方法 -->
+  </body>
+</html>

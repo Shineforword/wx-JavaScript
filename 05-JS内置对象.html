@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS内置对象</title>
+    <script>
+      //1.查文档MDN/W3C
+
+      //2.Math数学对象,不是一个构造函数,所有我们不需要new来调用,直接使用
+      console.log(Math.PI);
+      console.log(Math.max(1, 2, 3, 55));
+      console.log(Math.max(1, 2, 3, 'wo'));
+      console.log(Math.max());
+      // 常用;Math.floor() 向下取整   Math.ceil()向上取整   Math.round() 四舍五入 Math.abs 绝对值
+      // Math.random();随机小数
+      console.log(Math.random());
+
+      //3.Date() 日期对象 是一个构造函数 必须使用new来调用创建我们的日期对象
+      var date = new Date();
+      console.log(date.getFullYear());
+      console.log(date.getMonth()); //月份0-11
+      console.log(date.getDate()); //号
+      console.log(date.getDay()); //星期0-6
+      console.log(date.getMinutes());
+      //毫秒数
+      console.log(date.getTime()); //毫秒数
+      console.log(date.valueOf()); //毫秒数
+      var date1 = +new Date();
+      console.log(date1); //毫秒数
+      console.log(Date.now()); //毫秒数 \(^o^)/~ h5新增
+
+      //4.数组对象
+      var arr1 = [1, 2, 3, 4];
+      console.log(arr1[1]);
+      var arr2 = new Array(2); //表示数组长度为2,里面有两个空的数组元素
+      var arr3 = new Array(2, 3); //等价于[2,3] 这样写表示里面有2个数组元素 是2和3
+      console.log(arr2);
+      console.log(arr3);
+      //检测是否为数组 instanceof
+      console.log(arr2 instanceof Array);
+      console.log(arr2 instanceof String);
+      //添加或删除
+      arr3.push(1, 4, 4, 4, 5, 6); //push 末位后添加 返回新的长度
+      arr3.unshift('qian'); //unshift 首位前添加  返回新的长度
+      console.log(arr3);
+      //arr3.pop(); //删除末位元素,不跟参数 返回被删除元素
+      // arr3.shift()//删除首位  返回被删除元素
+      console.log(arr3.pop());
+      console.log(arr3.shift());
+      console.log(arr3);
+
+      //数组逆序
+      console.log(arr3.reverse());
+      //数组排序
+      arr3.sort(function (a, b) {
+        return a - b; //升序
+      });
+      arr3.sort(function (a, b) {
+        return b - a; //降序
+      });
+      console.log(arr3);
+      //数组索引 返回数组元素索引号
+      // 只返回一个满足条件的索引号  若找不到满足条件的元素返回-1
+      console.log(arr3.indexOf('4'));
+      console.log(arr3.indexOf(4)); //从前查找
+      console.log(arr3.lastIndexOf(4)); //从后查找
+      //数组转化字符串
+      console.log(arr3.toString()); //默认逗号分割
+      console.log(arr3.join('!')); //默认逗号分割,可以加参数
+    </script>
+  </head>
+
+  <body></body>
+</html>
